@@ -1,11 +1,25 @@
+function sendDataToServer(inputJson) {
+  $.get({
+    url: 'http://localhost:3001/data',
+    contentType: 'plain/text',
+  }).done(function (data) {
+    console.log(data);
+  });
+  console.log("load performed");
+}
+
 
 $(document).ready(() => {
   console.log("doc loaded");
-  $('.submit').click(function() {
+
+  $('.submit').click(function(e) {
+    e.preventDefault();
     console.log('submit clicked');
     let inputJson = $('#json-input').val();
+    console.log("sending: ", inputJson);
     sendDataToServer(inputJson);
   });
+
 });
 
 // $("#target").click(function () {
