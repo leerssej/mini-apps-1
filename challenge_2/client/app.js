@@ -2,6 +2,7 @@ function sendDataToServer(inputJson) {
   $.post({
     url: 'http://localhost:3001/data',
     contentType: 'text/plain',
+    data: {inputJson},
   }).done(function (reply) {
     console.log("successfully sent to server, and response from server is: ", reply );
   }).fail(function () {
@@ -23,14 +24,5 @@ $(document).ready(() => {
   });
 
 });
-
-// $("#target").click(function () {
-//   alert("Handler for .click() called.");
-// });
-
-// // A $( document ).ready() block.
-// $(document).ready(function () {
-//   console.log("ready!");
-// });
 
 console.log("Script Was Run outside of docReady")
