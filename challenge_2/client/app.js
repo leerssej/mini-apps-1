@@ -1,5 +1,5 @@
 function sendDataToServer(inputJson) {
-  $.get({
+  $.post({
     url: 'http://localhost:3001/data',
     contentType: 'plain/text',
   }).done(function (data) {
