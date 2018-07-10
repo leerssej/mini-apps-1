@@ -1,8 +1,9 @@
 function sendDataToServer(inputJson) {
+  console.log(inputJson);
   $.post({
     url: 'http://localhost:3001/data',
-    contentType: 'text/plain',
-    data: {inputJson},
+    contentType: 'application/json',
+    data: inputJson,
   }).done(function (reply) {
     console.log("successfully sent to server, and response from server is: ", reply );
   }).fail(function () {
