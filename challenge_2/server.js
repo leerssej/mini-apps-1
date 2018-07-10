@@ -22,8 +22,10 @@ app.use(function (request, response, next) {
 // GET request
 app.get('/data', (req, res) => res.send('Hello World!'));
 
-// POST request
-app.post('/data', (req, res) => res.send('Hello Mars!'));
 
+
+// POST request
+// app.post('/data', (req, res) => res.send('Hello Mars!'+ req));
+app.post('/data', (req, res) => res.send("Thanks for the Post!"));
 
 app.listen(3001, () => console.log('Example app listening on port 3001!'));

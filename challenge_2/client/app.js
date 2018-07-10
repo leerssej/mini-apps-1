@@ -1,11 +1,13 @@
 function sendDataToServer(inputJson) {
   $.post({
     url: 'http://localhost:3001/data',
-    contentType: 'plain/text',
-  }).done(function (data) {
-    console.log(data);
+    contentType: 'text/plain',
+  }).done(function (reply) {
+    console.log("successfully sent to server, and response from server is: ", reply );
+  }).fail(function () {
+    console.log("error: data never left client")
   });
-  console.log("load performed");
+  // console.log("POST sent from client");
 }
 
 
