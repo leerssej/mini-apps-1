@@ -1,0 +1,15 @@
+{
+  "name": "challenge_2",
+  "version": "1.0.0",
+  "description": "Generate CSV's from JSON",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "jens leerssen",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
