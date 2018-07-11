@@ -8,9 +8,9 @@ function sendDataToServer(inputJson) {
     console.log("successfully sent to server, and response from server is: ", reply );
     $('#json-input').val(reply);
   }).fail(function () {
-    console.log("error: data never left client")
+    console.log("datatype: ", typeof inputJson);
+    console.log("datatype needs to be of valid content-type: application/json");
   });
-  // console.log("POST sent from client");
 }
 
 
