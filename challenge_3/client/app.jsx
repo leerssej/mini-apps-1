@@ -1,5 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+
 
 // var App = () => <div>Hello World</div>;
 // ReactDOM.render(<App />, document.getElementById('app'));
@@ -7,6 +6,6 @@ const App = () => (
   <div>Some cliche salutation</div>
 );
 
-ReactDOM.render(<App />, document.getElementById("app"));
+console.log("app was run")
 
-export default App;
+ReactDOM.render(<App />, document.getElementById("app"));
