@@ -13,16 +13,16 @@ let traverse = function(current) {
     let values = Object.values(current);
     values.pop();
     resultArr.push(values.join(',')); 
-
+  
     if (current.children) {
       current.children.forEach(employee => {
         getValuesOfChildren(employee);
-      })
+      });
     }
   }
   getValuesOfChildren(current);
   return resultArr.join('\n');
 }
 
-// console.log(traverse(example));
+console.log(traverse(example));
 module.exports = {traverse};

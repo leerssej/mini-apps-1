@@ -6,6 +6,7 @@ function sendDataToServer(inputJson) {
     data: inputJson,
   }).done(function (reply) {
     console.log("successfully sent to server, and response from server is: ", reply );
+    $('#json-input').val(reply);
   }).fail(function () {
     console.log("error: data never left client")
   });

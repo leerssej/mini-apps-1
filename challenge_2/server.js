@@ -10,15 +10,12 @@ const transform = require(path.join(__dirname, './traverse.js'));
 // to load the data into the server
 // set server to listen
 
-let dataCache = [];
-
-
 // // serve static assets
 app.use(express.static(path.join(__dirname, 'client')));
 
 // add logging middleware
 app.use(function (request, response, next) {
-  console.log(request.method, request.path);//, dataCache);//, response);
+  console.log(request.method, request.path);
   next();
 });
 
