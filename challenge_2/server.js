@@ -29,9 +29,8 @@ app.use(bodyparser.json());
 app.post('/data', (req, res) => {
   res.send("Thanks for the Post!")
   // console.log(JSON.stringify(req.body));
-  let sentData = req.body;
-  console.log(sentData);
-  // dataCache.push(sentData);
+  // let sentData = req.body;
+  // console.log(sentData);
 });
 
 // GET request
