@@ -32,4 +32,4 @@ app.post('/data', (req, res) => {
 // GET request
 app.get('/data', (req, res) => res.send('Hello World!'));
 
-app.listen(3001, () => console.log('Example app listening on port 3001!', transform));
+app.listen(3001, () => console.log('Example app listening on port 3001!'));
