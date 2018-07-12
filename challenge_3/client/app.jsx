@@ -36,6 +36,7 @@ class App extends React.Component {
     this.setState({ isCheckingOut: false });
     this.setState({ isAccountInfoSubmitted: false });
     console.log(this.state);
+
   }
 
   handleInputChange(event) {
