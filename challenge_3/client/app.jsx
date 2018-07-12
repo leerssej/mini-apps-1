@@ -38,6 +38,14 @@ class App extends React.Component {
     this.setState({ password: event.target.value });
   }
 
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+
+    this.setState({ [name]: value });
+  }
+
   render() {
     if (!this.state.isCheckingOut) {
       return (
@@ -55,15 +63,15 @@ class App extends React.Component {
           <h4>Account Info</h4>
           <div>
             <label>Username:</label><br></br>
-            <input type='text' value={this.state.username} onChange={this.handleUsernameChange.bind(this)}/>
+            <input name="username" type='text' value={this.state.username} onChange={this.handleInputChange.bind(this)}/>
           </div>
           <div>
             <label>email:</label><br></br>
-            <input type='text' value={this.state.email} onChange={this.handleEmailChange.bind(this)} />
+            <input name="email" type='text' value={this.state.email} onChange={this.handleInputChange.bind(this)} />
           </div>
           <div>
             <label>password:</label><br></br>
-            <input type='password' value={this.state.password} onChange={this.handlePasswordChange.bind(this)} />
+            <input name="password" type='password' value={this.state.password} onChange={this.handleInputChange.bind(this)} />
             <input type='submit' className='AccountSubmit' value='Next' onClick={this.handleAccountSubmit.bind(this)}/>
           </div>
         </div>
