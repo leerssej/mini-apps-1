@@ -9,6 +9,16 @@ class App extends React.Component {
       username: '',
       email: '',
       password: '',
+      addrline1: '',
+      addrline2: '',
+      city: '',
+      state: '',
+      shipzip: '',
+      phone: '',
+      ccnum: '',
+      expdate: '',
+      cvv: '',
+      billzip: '',
     }
   } // closes constructor
   
@@ -26,16 +36,6 @@ class App extends React.Component {
     this.setState({ isCheckingOut: false });
     this.setState({ isAccountInfoSubmitted: false });
     console.log(this.state);
-  }
-
-  handleUsernameChange(event) {
-    this.setState({ username: event.target.value });
-  }
-  handleEmailChange(event) {
-    this.setState({ email: event.target.value });
-  }
-  handlePasswordChange(event) {
-    this.setState({ password: event.target.value });
   }
 
   handleInputChange(event) {
